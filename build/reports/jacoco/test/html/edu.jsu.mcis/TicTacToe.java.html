@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>TicTacToe.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">jsu-mcis-cs310-tictactoe</a> &gt; <a href="index.source.html" class="el_package">edu.jsu.mcis</a> &gt; <span class="el_source">TicTacToe.java</span></div><h1>TicTacToe.java</h1><pre class="source lang-java linenums">package edu.jsu.mcis;
+import java.util.Scanner;
+
+public class TicTacToe{
+	private String[][] board;
+<span class="fc" id="L6">	private String winner = &quot;&quot;;</span>
+	private boolean player1;
+	
+<span class="fc" id="L9">	public TicTacToe() {</span>
+<span class="fc" id="L10">		board = new String[3][3];</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">		for(int i = 0; i &lt; 3; i++) {</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">			for(int j = 0; j &lt; 3; j++) {</span>
+<span class="fc" id="L13">				board[i][j] = &quot; &quot;;</span>
+			}
+		}
+<span class="fc" id="L16">	}</span>
+	
+	public String display(){
+<span class="fc" id="L19">		String s = &quot;&quot;;</span>
+<span class="fc" id="L20">		s = board[0][0] + &quot;|&quot; + board[0][1] + &quot;|&quot; + board[0][2] +&quot;\n-----\n&quot;;</span>
+<span class="fc" id="L21">		s = s + board[1][0] +&quot;|&quot; + board[1][1] + &quot;|&quot; + board[1][2] +&quot;\n-----\n&quot;;</span>
+<span class="fc" id="L22">		s = s + board[2][0] +&quot;|&quot; + board[2][1] + &quot;|&quot; + board[2][2];</span>
+<span class="fc" id="L23">		return s;</span>
+	}
+	
+	public String getLocation(int i, int j){
+<span class="fc" id="L27">		return board[i][j];</span>
+	}
+	
+	public void markX(int i, int j){
+<span class="fc" id="L31">		board[i][j]= &quot;X&quot;;</span>
+<span class="fc" id="L32">	}</span>
+	
+	public void markO(int i, int j){
+<span class="fc" id="L35">		board[i][j] = &quot;O&quot;;</span>
+<span class="fc" id="L36">	}</span>
+	
+	
+	public String getWinner(){
+<span class="pc bpc" id="L40" title="1 of 6 branches missed.">		if(board[0][0]==&quot;X&quot; &amp;&amp; board[1][1]==&quot;X&quot; &amp;&amp; board[2][2]==&quot;X&quot;)</span>
+<span class="fc" id="L41">			winner = &quot;X&quot;;</span>
+<span class="pc bpc" id="L42" title="1 of 6 branches missed.">		else if	(board[0][2]== &quot;X&quot; &amp;&amp; board[1][1]==&quot;X&quot; &amp;&amp; board[2][0]== &quot;X&quot;)</span>
+<span class="fc" id="L43">			winner = &quot;X&quot;;</span>
+<span class="pc bpc" id="L44" title="1 of 6 branches missed.">		else if (board[0][0]==&quot;X&quot; &amp;&amp; board[0][1]==&quot;X&quot; &amp;&amp; board[0][2]==&quot;X&quot;)</span>
+<span class="fc" id="L45">			winner = &quot;X&quot;;</span>
+<span class="pc bpc" id="L46" title="1 of 6 branches missed.">		else if (board[1][2]==&quot;X&quot; &amp;&amp; board[1][1]==&quot;X&quot; &amp;&amp; board[1][0]==&quot;X&quot;)</span>
+<span class="fc" id="L47">			winner = &quot;X&quot;;</span>
+<span class="pc bpc" id="L48" title="1 of 6 branches missed.">		else if (board[2][2]==&quot;X&quot; &amp;&amp; board[2][1]==&quot;X&quot; &amp;&amp; board[2][0]==&quot;X&quot;)</span>
+<span class="fc" id="L49">			winner = &quot;X&quot;;</span>
+<span class="pc bpc" id="L50" title="2 of 6 branches missed.">		else if (board[0][0]==&quot;X&quot; &amp;&amp; board[1][0]==&quot;X&quot; &amp;&amp; board[2][0]==&quot;X&quot;)</span>
+<span class="fc" id="L51">			winner = &quot;X&quot;;	</span>
+<span class="pc bpc" id="L52" title="2 of 6 branches missed.">		else if (board[0][1]==&quot;X&quot; &amp;&amp; board[1][1]==&quot;X&quot; &amp;&amp; board[2][1]==&quot;X&quot;)</span>
+<span class="fc" id="L53">			winner = &quot;X&quot;;</span>
+<span class="pc bpc" id="L54" title="2 of 6 branches missed.">		else if (board[0][2]==&quot;X&quot; &amp;&amp; board[1][2]==&quot;X&quot; &amp;&amp; board[2][2]==&quot;X&quot;)</span>
+<span class="fc" id="L55">			winner = &quot;X&quot;;</span>
+<span class="pc bpc" id="L56" title="1 of 6 branches missed.">		else if(board[0][0]==&quot;O&quot; &amp;&amp; board[1][1]==&quot;O&quot; &amp;&amp; board[2][2]==&quot;O&quot;)</span>
+<span class="fc" id="L57">		 	winner = &quot;O&quot;;</span>
+<span class="pc bpc" id="L58" title="1 of 6 branches missed.">		else if(board[0][2]== &quot;O&quot; &amp;&amp; board[1][1]==&quot;O&quot; &amp;&amp; board[2][0]== &quot;O&quot;)</span>
+<span class="fc" id="L59">			winner = &quot;O&quot;;</span>
+<span class="pc bpc" id="L60" title="1 of 6 branches missed.">		else if (board[0][0]==&quot;O&quot; &amp;&amp; board[0][1]==&quot;O&quot; &amp;&amp; board[0][2]==&quot;O&quot;)</span>
+<span class="fc" id="L61">			winner = &quot;O&quot;;</span>
+<span class="pc bpc" id="L62" title="1 of 6 branches missed.">		else if (board[1][2]==&quot;O&quot; &amp;&amp; board[1][1]==&quot;O&quot; &amp;&amp; board[1][0]==&quot;O&quot;)</span>
+<span class="fc" id="L63">			winner = &quot;O&quot;;</span>
+<span class="pc bpc" id="L64" title="1 of 6 branches missed.">		else if (board[2][2]==&quot;O&quot; &amp;&amp; board[2][1]==&quot;O&quot; &amp;&amp; board[2][0]==&quot;O&quot;)</span>
+<span class="fc" id="L65">			winner = &quot;O&quot;;</span>
+<span class="pc bpc" id="L66" title="2 of 6 branches missed.">		else if (board[0][0]==&quot;O&quot; &amp;&amp; board[1][0]==&quot;O&quot; &amp;&amp; board[2][0]==&quot;O&quot;)</span>
+<span class="fc" id="L67">			winner = &quot;O&quot;;</span>
+<span class="pc bpc" id="L68" title="2 of 6 branches missed.">		else if (board[0][1]==&quot;O&quot; &amp;&amp; board[1][1]==&quot;O&quot; &amp;&amp; board[2][1]==&quot;O&quot;)</span>
+<span class="fc" id="L69">			winner = &quot;O&quot;;</span>
+<span class="pc bpc" id="L70" title="3 of 6 branches missed.">		else if (board[0][2]==&quot;O&quot; &amp;&amp; board[1][2]==&quot;O&quot; &amp;&amp; board[2][2]==&quot;O&quot;)</span>
+<span class="fc" id="L71">			winner = &quot;O&quot;;</span>
+		else
+<span class="nc" id="L73">			winner = &quot;NONE&quot;;</span>
+<span class="fc" id="L74">		return winner;</span>
+	}
+	
+	public boolean getPlayer(int count){
+<span class="fc bfc" id="L78" title="All 2 branches covered.">		if(count % 2 == 0)</span>
+<span class="fc" id="L79">			player1=true;</span>
+		else 
+<span class="fc" id="L81">			player1 = false;</span>
+<span class="fc" id="L82">		return player1;</span>
+	}
+	public static void main(String[] args) {
+<span class="nc" id="L85">		TicTacToe game = new TicTacToe();</span>
+		
+<span class="nc" id="L87">		game.display();</span>
+		
+<span class="nc bnc" id="L89" title="All 2 branches missed.">		while(game.getWinner() == &quot;NONE&quot;){</span>
+<span class="nc" id="L90">			int count = 0;</span>
+<span class="nc" id="L91">			System.out.println(&quot;Please type in the coordinates of your move&quot;);</span>
+<span class="nc" id="L92">			Scanner scanner = new Scanner (System.in);</span>
+<span class="nc" id="L93">			int [] move = new int [2];</span>
+<span class="nc bnc" id="L94" title="All 2 branches missed.">			for(int i = 0; i &lt; move.length; i ++)</span>
+<span class="nc" id="L95">				move[i] = scanner.nextInt();</span>
+
+<span class="nc bnc" id="L97" title="All 2 branches missed.">			if (game.getPlayer(count)== true)	</span>
+<span class="nc" id="L98">				game.markX(move[0],move[1]);</span>
+			else
+<span class="nc" id="L100">				game.markO(move[0],move[1]);</span>
+<span class="nc" id="L101">			count ++;	</span>
+<span class="nc" id="L102">			game.getWinner();</span>
+<span class="nc" id="L103">		}</span>
+    
+<span class="nc" id="L105">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>
