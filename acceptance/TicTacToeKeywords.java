@@ -7,18 +7,13 @@ private class TicTacToeKeywords{
 	}
 	
 	
-	public String markLocation(int row, int col){
-		return game.markLocation(row, col);
+	public void markLocation(){
+		return game.actionEvent();
 	}
-	
-	
-	public String getLocation(int row, int col){
-		return game.getLocation(row, col);
-	}
-	
+
 	
 	public String getWinner(){
-		return game.getwinner();
+		return game.checkWinner();
 	}
 	
 }

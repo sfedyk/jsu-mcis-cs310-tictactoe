@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.jsu.mcis.TicTacToeTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2014-09-05T03:42:18" hostname="SarahSchool" time="0.044">
+<testsuite name="edu.jsu.mcis.TicTacToeTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2014-09-17T03:07:48" hostname="SarahSchool" time="0.255">
   <properties/>
-  <testcase name="testDiagonalRightOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.012"/>
-  <testcase name="testDiagonalRightXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testPlayer1" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
-  <testcase name="testPlayer2" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
-  <testcase name="testDisplayEmptyBoard" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testHorizontalBottomOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testHorizontalBottomXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testVerticalMiddleOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testVerticalMiddleXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testVerticalLeftOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
-  <testcase name="testVerticalLeftXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testDiagonalLeftOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testDiagonalLeftXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testMarkLocationTopMiddle" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testHorizontalMiddleOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testHorizontalMiddleXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
-  <testcase name="testMarkLocationUpperLeft" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testgetLocation" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testVerticalRightOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testVerticalRightXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
-  <testcase name="testHorizontalTopOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>
-  <testcase name="testHorizontalTopXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.001"/>
+  <testcase name="testVerticleLeftOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.172"/>
+  <testcase name="testVerticleLeftXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.003"/>
+  <testcase name="testDiagonalRightOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.004"/>
+  <testcase name="testDiagonalRightXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.004"/>
+  <testcase name="testPlayer1" classname="edu.jsu.mcis.TicTacToeTest" time="0.004"/>
+  <testcase name="testPlayer2" classname="edu.jsu.mcis.TicTacToeTest" time="0.003"/>
+  <testcase name="testHorizontalBottomOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.004"/>
+  <testcase name="testHorizontalBottomXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.004"/>
+  <testcase name="testVerticleRightOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.005"/>
+  <testcase name="testVerticleRightXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.005"/>
+  <testcase name="testDiagonalLeftOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.004"/>
+  <testcase name="testDiagonalLeftXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.004"/>
+  <testcase name="testHorizontalMiddleOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.004"/>
+  <testcase name="testHorizontalMiddleXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.005"/>
+  <testcase name="testVerticleMiddleOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.003"/>
+  <testcase name="testVerticleMiddleXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.004"/>
+  <testcase name="testHorizontalTopOWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.008"/>
+  <testcase name="testHorizontalTopXWin" classname="edu.jsu.mcis.TicTacToeTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
